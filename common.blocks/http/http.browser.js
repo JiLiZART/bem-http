@@ -126,16 +126,16 @@ modules.define(
              */
             _requests: {},
 
-            abortable: function (block, name) {
-                return this._factory(block, name, 'abortable');
+            abortable: function (block, name, params) {
+                return this._factory(block, name, 'abortable', params);
             },
 
-            concurrent: function (block, name) {
-                return this._factory(block, name, 'concurrent');
+            concurrent: function (block, name, params) {
+                return this._factory(block, name, 'concurrent', params);
             },
 
-            once: function (block, name) {
-                return this._factory(block, name, 'once');
+            once: function (block, name, params) {
+                return this._factory(block, name, 'once', params);
             },
 
             _factory: function (block, name, strategy, params) {

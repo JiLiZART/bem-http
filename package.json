@@ -12,7 +12,10 @@
     "specs": "enb make specs",
     "docs": "enb make docs",
     "tmpls": "enb make specs",
-    "coverage": "ISTANBUL_COVERAGE=yes npm run specs"
+    "coverage": "ISTANBUL_COVERAGE=yes npm run specs",
+    "release:patch": "mversion patch -m 'chore(version): bump to v%s' --tag 'v%s'",
+    "release:minor": "mversion minor -m 'chore(version): bump to v%s' --tag 'v%s'",
+    "release:major": "mversion major -m 'chore(version): bump to v%s' --tag 'v%s'"
   },
   "repository": {
     "type": "git",
@@ -52,6 +55,7 @@
     "jscs": "^1.12.0",
     "jscs-bem": "^0.2.0",
     "jshint": "2.6.3",
-    "jshint-groups": "^0.7.0"
+    "jshint-groups": "^0.7.0",
+    "mversion": "^1.10.1"
   }
 }

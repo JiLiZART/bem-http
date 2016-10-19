@@ -20,9 +20,28 @@
 
 ##### Отменяемый запрос (модификатор `strategy` в значении `abortable`)
 
+```js
+Http.abortable(myBlock).get(url).then(function (response) {
+    var text = response.getText();
+    
+    BEMDOM.update(this.elem('somelem'), response.getText());
+});
+```
+Если этот код вызвать дважды, предидущий запрос отмениться.
+
 <a name="modstrategyconcurrent"></a>
 
 ##### Параллельный запрос (модификатор `strategy` в значении `concurrent`)
+
+```js
+Http.concurrent(myBlock).get(url).then(function (response) {
+    var text = response.getText();
+    
+    BEMDOM.update(this.elem('somelem'), response.getText());
+});
+```
+
+Обычные параллельные запросы
 
 <a name="modstrategyonce"></a>
 
@@ -35,3 +54,4 @@ Http.once(myBlock).get(url).then(function (response) {
     BEMDOM.update(this.elem('somelem'), response.getText());
 });
 ```
+Запрос произойдет единожды, его результат закешируется, при повторном вызове будет вернется заполненный промис.

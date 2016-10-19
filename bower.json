@@ -1,0 +1,32 @@
+{
+  "name": "bem-http",
+  "homepage": "https://github.com/JiLiZART/bem-http",
+  "authors": [
+    "Nikolay Kostyurin <nikolay@artkost.ru>"
+  ],
+  "description": "Http Request library on BEM methogology",
+  "main": "common.blocks/http/http.browser.js",
+  "keywords": [
+    "bem",
+    "http"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    ".enb",
+    "common.specs",
+    "example.bundles",
+    "example.blocks",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bem-components": "2.4.0"
+  },
+  "devDependencies": {
+    "bem-pr": "~0.10.0"
+  }
+}

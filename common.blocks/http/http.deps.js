@@ -1,11 +1,12 @@
 ({
-    mustDeps: [
-        {elem: 'response'},
+    mustDeps : [
+        { elem : 'response' },
         'identify',
         'objects',
-        'i-bem'
+        'i-bem',
+        'jquery'
     ],
-    shouldDeps: [
-        {mods: {strategy: ['abortable', 'concurrent', 'once']}}
+    shouldDeps : [
+        { mods : { strategy : ['abortable', 'concurrent', 'once'] } }
     ]
 })

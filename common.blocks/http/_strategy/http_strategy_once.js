@@ -13,24 +13,24 @@ modules.define(
          *
          */
         provide(Http.decl({
-            block: this.name,
-            modName: 'strategy',
-            modVal: 'once'
+            block : this.name,
+            modName : 'strategy',
+            modVal : 'once'
         }, /** @lends http_strategy_once.prototype */{
             /**
              * @param jqXHRCallback
              * @returns {*}
              */
-            execute: function (jqXHRCallback) {
-                if (typeof this._current === 'undefined') {
+            execute : function (jqXHRCallback) {
+                if(typeof this._current === 'undefined') {
                     this._current = jqXHRCallback();
                 }
 
                 return this._current;
             },
 
-            abort: function () {
-                if (this._current && this._current.abort) {
+            abort : function () {
+                if(this._current && this._current.abort) {
                     this._current.abort();
                 }
 

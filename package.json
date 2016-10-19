@@ -1,0 +1,57 @@
+{
+  "name": "bem-http",
+  "version": "1.0.0",
+  "description": "Http Request library on BEM methogology",
+  "main": "common.blocks/http/http.browser.js",
+  "scripts": {
+    "postinstall": "npm run deps",
+    "start": "enb server",
+    "test": "npm run specs",
+    "deps": "bower i",
+    "lint": "jshint-groups && jscs .",
+    "specs": "enb make specs",
+    "docs": "enb make docs",
+    "tmpls": "enb make specs",
+    "coverage": "ISTANBUL_COVERAGE=yes npm run specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiLiZART/bem-http.git"
+  },
+  "keywords": [
+    "bem",
+    "http"
+  ],
+  "author": "Nikolay Kostyurin <nikolay@artkost.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JiLiZART/bem-http/issues"
+  },
+  "homepage": "https://github.com/JiLiZART/bem-http#readme",
+  "dependencies": {
+    "bem-environ": "1.4.0",
+    "bower": "^1.7.1"
+  },
+  "devDependencies": {
+    "bem-naming": "0.5.1",
+    "bh": "3.3.0",
+    "borschik-tech-cleancss": "2.0.1",
+    "enb": "^1.1.0",
+    "enb-bem-docs": "^0.11.0",
+    "enb-bem-specs": "^0.8.0",
+    "enb-bem-techs": "^2.1.0",
+    "enb-bemxjst": "^4.0.2",
+    "enb-borschik": "^2.2.0",
+    "enb-js": "^1.1.0",
+    "enb-magic-factory": "^0.5.0",
+    "enb-modules": "^0.2.0",
+    "enb-stylus": "^2.2.0",
+    "git-hooks": "0.0.10",
+    "http-server": "^0.8.0",
+    "istanbul": "0.3.8",
+    "jscs": "^1.12.0",
+    "jscs-bem": "^0.2.0",
+    "jshint": "2.6.3",
+    "jshint-groups": "^0.7.0"
+  }
+}

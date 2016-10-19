@@ -13,15 +13,15 @@ modules.define(
          *
          */
         provide(Http.decl({
-            block: this.name,
-            modName: 'strategy',
-            modVal: 'concurrent'
+            block : this.name,
+            modName : 'strategy',
+            modVal : 'concurrent'
         }, /** @lends http_strategy_concurrent.prototype */{
             /**
              * @param jqXHRCallback
              * @returns {*}
              */
-            execute: function (jqXHRCallback) {
+            execute : function (jqXHRCallback) {
                 var jqXHR = jqXHRCallback();
 
                 this._requests = this._requests || [];
@@ -32,7 +32,7 @@ modules.define(
                 return this._current;
             },
 
-            abort: function () {
+            abort : function () {
                 this._requests.forEach(function (rq) {
                     rq.abort();
                 });

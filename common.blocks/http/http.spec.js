@@ -1,15 +1,15 @@
 modules.define('spec',
     ['i-bem__dom', 'jquery', 'http'],
-    function(provide, BEMDOM, $, Http) {
+    function (provide) {
 
-describe('http', function() {
+        describe('http', function () {
 
-    it('should make abortable request', function() {
+            // it('should make abortable request', function() {
+            //
+            // });
+
+        });
+
+        provide();
 
     });
-
-});
-
-provide();
-
-});

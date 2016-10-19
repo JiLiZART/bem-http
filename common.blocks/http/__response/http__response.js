@@ -11,32 +11,32 @@ modules.define(
         }
 
         Response.prototype = objects.extend(Response.prototype, {
-            setData: function (data) {
+            setData : function (data) {
                 this.data = data;
                 return this;
             },
 
-            getXHR: function () {
+            getXHR : function () {
                 return this.data.jqXHR;
             },
 
-            getJSON: function () {
+            getJSON : function () {
                 return this.getXHR().responseJSON;
             },
 
-            getText: function () {
+            getText : function () {
                 return this.getXHR().responseText;
             },
 
-            getStatus: function () {
+            getStatus : function () {
                 return this.getXHR().status;
             },
 
-            getStatusText: function () {
+            getStatusText : function () {
                 return this.getXHR().statusText;
             },
 
-            getError: function () {
+            getError : function () {
                 return this.data.errorThrown;
             }
         });

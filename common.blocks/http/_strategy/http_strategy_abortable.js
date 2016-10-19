@@ -10,12 +10,16 @@ modules.define(
          * @class http
          * @bem
          */
-        provide(Http.decl({block : this.name, modName: 'strategy', modVal: 'abortable'}, /** @lends http.prototype */{
+        provide(Http.decl({
+            block : this.name,
+            modName : 'strategy',
+            modVal : 'abortable'
+        }, /** @lends http.prototype */{
             /**
              * @param jqXHRCallback
              * @returns {*}
              */
-            execute: function (jqXHRCallback) {
+            execute : function (jqXHRCallback) {
                 var jqXHR = jqXHRCallback();
 
                 this.abort();
@@ -24,8 +28,8 @@ modules.define(
                 return this._current;
             },
 
-            abort: function () {
-                if (this._current && this._current.abort) {
+            abort : function () {
+                if(this._current && this._current.abort) {
                     this._current.abort();
                 }
 

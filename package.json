@@ -1,6 +1,6 @@
 {
   "name": "bem-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Http Request library on BEM methogology",
   "main": "common.blocks/http/http.browser.js",
   "scripts": {
